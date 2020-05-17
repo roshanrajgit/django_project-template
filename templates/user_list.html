@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div>
+        <div>
+            <div class="row">
+				<div>
+					<div class="section_title"><center><h2>This is user list!!</h2></div>
+				</div>
+            </div>
+            <form>
+	            <table border="1">
+                    <tr>
+                        <th>Username</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Email ID</th>
+                    </tr>
+
+                    {% for usr in usrs %}
+
+                     <tr>
+                        <td>{{usr.username}}</td>
+                        <td>{{usr.first_name}}</td>
+                        <td>{{usr.last_name}}</td>
+                        <td>{{usr.email}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </form>
+                    
+        </div>
+
+    </div>
+
+</body>
+</html>
